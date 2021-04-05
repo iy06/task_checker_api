@@ -4,7 +4,8 @@ lock '3.16.0'
 set :application, 'task_checker_api'
 set :repo_url, 'git@github.com:iy06/task_checker_api.git'
 
-# Default branch is :master -> set :branch, 'master'
+# Default branch is :master
+# set :branch, 'master'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
