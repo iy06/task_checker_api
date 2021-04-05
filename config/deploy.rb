@@ -4,14 +4,13 @@ lock '~> 3.16.0'
 set :application, 'task_checker_api'
 set :repo_url, 'git@example.com:iy06/task_checker_api.git'
 
-# Default branch is :master
-set :branch, 'master'
+# Default branch is :master -> set :branch, 'master'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.6.5'
 
-set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/free-market_linux2.pem']
+set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/iy06.pem']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
