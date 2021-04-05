@@ -27,11 +27,12 @@
 #   https://github.com/capistrano/passenger
 #
 
+# apiなのでprecompile不要
+# require 'capistrano/rails/assets'
 require 'capistrano/setup'
 require 'capistrano/deploy'
 require 'capistrano/rbenv'
 require 'capistrano/bundler'
-require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano3/unicorn'
 
