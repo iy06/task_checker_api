@@ -7,8 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # origins "https://master.d3g8de0zu4vt37.amplifyapp.com"
-    origins "*"
+    origins "*", "#{ENV['API_URL']}"
 
     resource "*",
       headers: :any,
